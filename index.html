@@ -126,6 +126,7 @@
       0% {
         transform: scale(0.8);
       }
+
       50% {
         transform: scale(1);
       }
@@ -221,6 +222,7 @@
         <img class="funcImage" src="./1.png" />
       </div>
     </div>
+    <div class="swiper-pagination"></div>
   </div>
   <a href="https://github.com/amazingCoding/light-web-core" class="github">
     <svg t="1605055357044" class="icon" viewBox="0 0 1049 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -237,7 +239,10 @@
   <script>
     var mySwiper = new Swiper('.swiper-container', {
       direction: 'vertical',
-      mousewheel: true
+      mousewheel: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
     })        
   </script>
 
