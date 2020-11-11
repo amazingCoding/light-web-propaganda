@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./swiper-bundle.min.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .page1 {
+      width: 100%;
+      height: 100%;
+      padding-top: 1px;
+      box-sizing: border-box;
+      background-color: #576B98;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .title {
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 60px;
+    }
+
+    .desc {
+      width: 100%;
+      text-align: center;
+      margin-top: 50px;
+      color: #fff;
+    }
+
+    .tips {
+      /* height: 30px; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .code {
+      margin-top: 10px;
+      padding: 15px;
+      background-color: #000;
+      color: #fff;
+      width: 900px;
+      text-align: left;
+    }
+
+    .code1 {
+      width: 420px;
+    }
+
+    .code2 {
+      width: 600px;
+    }
+
+    .code3 {
+      width: 1000px;
+    }
+
+    .blue {
+      color: rgb(86, 156, 253);
+    }
+
+    .red {
+      color: rgb(224, 108, 117);
+    }
+
+    .demoImage {
+      width: 800px;
+      margin: 0px 20px;
+    }
+
+    .funcImage {
+      width: 800px;
+      margin: 20px;
+    }
+
+    .mainDesc {
+      margin-top: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .p1 {
+      margin-bottom: 30px;
+      /* width: 200px; */
+      color: #fff;
+    }
+
+    .github {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      z-index: 3;
+      animation: scale linear 2s infinite alternate;
+    }
+
+    @keyframes scale {
+      0% {
+        transform: scale(0.8);
+      }
+      50% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.2);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .title {
+        font-size: 36px;
+        margin: 0 10px;
+      }
+
+      .desc {
+        margin-top: 5px;
+      }
+
+      .code1,
+      .code2,
+      .code3 {
+        width: auto;
+        padding: 5px 5px 5px;
+        margin: 20px 15px;
+        line-height: 180%;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+
+      .mainDesc {
+        flex-direction: column;
+      }
+
+      .demoImage {
+        width: 90%;
+        margin: 0px 20px 30px;
+      }
+
+      .funcImage {
+        width: 90%;
+        margin: 20px;
+      }
+    }
+  </style>
+  <title>Document</title>
+
+</head>
+
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide page1">
+        <h1 class="title">LightWeb</h1>
+        <p class="desc">为你的 App 加入 小程序 功能</p>
+      </div>
+      <div class="swiper-slide page1">
+        <h1 class="title">一行代码接入</h1>
+        <p class="desc tips">
+          前端
+          <code class="code code1">
+            <span class="blue">const</span> lightWeb = <span class="blue">new</span> <span class="red">LightWebCore</span>(conf,success,fail)
+          </code>
+        </p>
+        <p class="desc tips">
+          安卓
+          <code class="code code2">
+            <span class="red">LightWebCoreActivity</span>.<span class="blue">createLightWebView</span>(activity,loadZipURL,maxRouter,true);
+          </code>
+        </p>
+        <p class="desc tips">
+          iOS
+          <code class="code code3">
+            <span class="red">LightWebCoreController</span> *app = [[<span class="blue">LightWebCoreController</span> <span class="blue">alloc</span>] <span class="blue">initWithURL</span>:loadZipURL <span class="blue">isDev</span>:YES <span class="blue">withMaxRouter</span>:maxRouter];<br/><br/>
+[self <span class="blue">presentViewController</span>:app <span class="blue">animated</span>:YES <span class="blue">completion</span>:nil];
+          </code>
+        </p>
+      </div>
+      <div class="swiper-slide page1">
+        <h1 class="title">基于 electron 制作的辅助工具</h1>
+        <div class="mainDesc">
+          <img class="demoImage"
+            src='https://raw.githubusercontent.com/amazingCoding/light-web-electron/master/img/1.png' />
+          <div>
+            <p class="p1">1. 完整的 devTool 工具</p>
+            <p class="p1">2. 便捷的 dark / light 切换</p>
+            <p class="p1">3. 和 客户端 一般的体验</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide page1">
+        <h1 class="title">不断拓展的新功能</h1>
+        <img class="funcImage" src="./1.png" />
+      </div>
+    </div>
+  </div>
+  <a href="https://github.com/amazingCoding/light-web-core" class="github">
+    <svg t="1605055357044" class="icon" viewBox="0 0 1049 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      p-id="2335" width="32" height="32">
+      <path
+        d="M524.979332 0C234.676191 0 0 234.676191 0 524.979332c0 232.068678 150.366597 428.501342 358.967656 498.035028 26.075132 5.215026 35.636014-11.299224 35.636014-25.205961 0-12.168395-0.869171-53.888607-0.869171-97.347161-146.020741 31.290159-176.441729-62.580318-176.441729-62.580318-23.467619-60.841976-58.234462-76.487055-58.234463-76.487055-47.804409-32.15933 3.476684-32.15933 3.476685-32.15933 53.019436 3.476684 80.83291 53.888607 80.83291 53.888607 46.935238 79.963739 122.553122 57.365291 152.97411 43.458554 4.345855-33.897672 18.252593-57.365291 33.028501-70.402857-116.468925-12.168395-239.022047-57.365291-239.022047-259.012982 0-57.365291 20.860106-104.300529 53.888607-140.805715-5.215026-13.037566-23.467619-66.926173 5.215027-139.067372 0 0 44.327725-13.906737 144.282399 53.888607 41.720212-11.299224 86.917108-17.383422 131.244833-17.383422s89.524621 6.084198 131.244833 17.383422C756.178839 203.386032 800.506564 217.29277 800.506564 217.29277c28.682646 72.1412 10.430053 126.029806 5.215026 139.067372 33.897672 36.505185 53.888607 83.440424 53.888607 140.805715 0 201.64769-122.553122 245.975415-239.891218 259.012982 19.121764 16.514251 35.636014 47.804409 35.636015 97.347161 0 70.402857-0.869171 126.898978-0.869172 144.282399 0 13.906737 9.560882 30.420988 35.636015 25.205961 208.601059-69.533686 358.967656-265.96635 358.967655-498.035028C1049.958663 234.676191 814.413301 0 524.979332 0z"
+        fill="#2c2c2c" p-id="2336"></path>
+      <path
+        d="M199.040177 753.571326c-0.869171 2.607513-5.215026 3.476684-8.691711 1.738342s-6.084198-5.215026-4.345855-7.82254c0.869171-2.607513 5.215026-3.476684 8.691711-1.738342s5.215026 5.215026 4.345855 7.82254z m-6.953369-4.345856M219.900283 777.038945c-2.607513 2.607513-7.82254 0.869171-10.430053-2.607514-3.476684-3.476684-4.345855-8.691711-1.738342-11.299224 2.607513-2.607513 6.953369-0.869171 10.430053 2.607514 3.476684 4.345855 4.345855 9.560882 1.738342 11.299224z m-5.215026-5.215027M240.760389 807.459932c-3.476684 2.607513-8.691711 0-11.299224-4.345855-3.476684-4.345855-3.476684-10.430053 0-12.168395 3.476684-2.607513 8.691711 0 11.299224 4.345855 3.476684 4.345855 3.476684 9.560882 0 12.168395z m0 0M269.443034 837.011749c-2.607513 3.476684-8.691711 2.607513-13.906737-1.738342-4.345855-4.345855-6.084198-10.430053-2.607513-13.037566 2.607513-3.476684 8.691711-2.607513 13.906737 1.738342 4.345855 3.476684 5.215026 9.560882 2.607513 13.037566z m0 0M308.555733 853.526c-0.869171 4.345855-6.953369 6.084198-13.037566 4.345855-6.084198-1.738342-9.560882-6.953369-8.691711-10.430053 0.869171-4.345855 6.953369-6.084198 13.037566-4.345855 6.084198 1.738342 9.560882 6.084198 8.691711 10.430053z m0 0M351.145116 857.002684c0 4.345855-5.215026 7.82254-11.299224 7.82254-6.084198 0-11.299224-3.476684-11.299224-7.82254s5.215026-7.82254 11.299224-7.82254c6.084198 0 11.299224 3.476684 11.299224 7.82254z m0 0M391.126986 850.049315c0.869171 4.345855-3.476684 8.691711-9.560882 9.560882-6.084198 0.869171-11.299224-1.738342-12.168395-6.084197-0.869171-4.345855 3.476684-8.691711 9.560881-9.560882 6.084198-0.869171 11.299224 1.738342 12.168396 6.084197z m0 0"
+        fill="#2c2c2c" p-id="2337"></path>
+    </svg>
+  </a>
+  <script src="./swiper-bundle.min.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      direction: 'vertical',
+      mousewheel: true
+    })        
+  </script>
+
+</body>
+
+</html>
